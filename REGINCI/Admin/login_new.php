@@ -23,7 +23,7 @@ $errors = array();
     $password1 = stripslashes($_REQUEST['password1']);
     $password2 = stripslashes($_REQUEST['password2']);
  
-    // Validation on s'assurer que le formulaire est correctement rempli
+    // Validation on s'assurer que le formulaire est correctement remplit
     // en ajoutant (array_push ()) l'erreur correspondante au tableau $ errors
  
     if ($password1 != $password2) 
@@ -79,7 +79,7 @@ $errors = array();
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
                 GESTION DES TG </h1>
-            <h1 class="box-title">Nouvel utilisteur? S'inscrire ici </h1>
+            <h1 class="box-title">Nouvel utilisateur? S'inscrire ici </h1>
             <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required autocomplete="off" />
 
             <input type="email" class="box-input" name="email" placeholder="Email" required />

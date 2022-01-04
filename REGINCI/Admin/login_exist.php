@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <!-- CSS only -->
 
     <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/style local.css" />
 </head>
