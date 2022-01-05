@@ -56,8 +56,8 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`Id_Client`, `Matricule_Client`, `Nom_Client`, `Prenom_Client`, `Email`, `Contact_Client`) VALUES
-(1, '483636L', 'KRA', 'KOBENAN', 'kra.kobenan2006@yahoo.com', '140011362'),
-(2, '528746K', 'KOBENAN', 'GBOKO THOMSON', 'kra.kobenan2006@yahoo.com', '127'),
+(1, '483636L', 'KRA', 'KOBENAN', 'kra.kobenan2006@yahoo.com', '0140011362'),
+(2, '528746K', 'KOBENAN', 'GBOKO THOMSON', 'kra.kobenan2006@yahoo.com', '0545639652'),
 (3, '546320P', 'DATTE', 'KOFFI JULDAS', 'krakobenan2006@yahoo.fr', '0707828317'),
 (4, '453784A', 'KRA', 'KOBENAN ALBERT', 'kra.kobenan2006@gmail.com', '0777320593');
 
