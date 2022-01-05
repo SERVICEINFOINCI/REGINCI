@@ -7,7 +7,7 @@
 
 <body>
     <?php
-    require('CONNEXION.php');
+    require('connexion_reginci.php');
 
 
     // Initialisation des variables
@@ -71,7 +71,7 @@
         }
     }
     ?>
-    <form class="box" action="" method="post" autocomplete="off" style="
+    <form class="box" action="indrt_user_new" method="post" autocomplete="off" style="
     padding-top: 10px;
 ">
         <img src="/REGINCI/images/logo.png" alt="logo" width="70px" style=" display: block;
