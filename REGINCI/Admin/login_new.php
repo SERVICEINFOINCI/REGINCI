@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/style local.css" />
+    <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
 </head>
 
 <body>
@@ -71,30 +72,40 @@
         }
     }
     ?>
+
     <form class="box" action="" method="post" autocomplete="off" style="
-    padding-top: 10px;
-">
+    padding-top: 10px;    width: 850px;">
         <img src="/REGINCI/images/logo.png" alt="logo" width="70px" style=" display: block;
     margin-left: auto; margin-right: auto; margin-bottom:auto ">
         <h1 class="box-title" style="
     margin-top: 10px;">BIENVENUE </h1>
         <h1 class="box-title">Nouvel utilisateur? S'inscrire ici </h1>
-        <input class="form-check-input" type="radio" name="sexe" id="monsieur">
-        <label class="form-check-label" for="flexRadioDefault1" style=" margin-right: 30px;">
-            Monsieur </label>
-        <input class="form-check-input" type="radio" name="sexe" id="madame" style=" margin-left: 20px;">
-        <label class="form-check-label" for="flexRadioDefault1">
-            Madame </label>
-        <input class="form-check-input" type="radio" name="sexe" id="mademoiselle" style=" margin-left: 30px;">
-        <label class="form-check-label" for="flexRadioDefault1">
-            Mademoiselle </label>
-        <input type="text" class="box-input" name="matricule" placeholder="Matricule" required autocomplete="off" style=" margin-top: 30px;" />
-        <input type="text" class="box-input" name="prenoms" placeholder="Prénoms" required autocomplete="off" />
-        <input type="text" class="box-input" name="nom" placeholder="Nom" required autocomplete="off" />
-        <input type="text" class="box-input" name="titre" placeholder="Titre ou fonction" required autocomplete="off" />
-        <input type="text" class="box-input" name="tg" placeholder="Trésorerie Générale" required autocomplete="off" />
-                <input type="password" class="box-input" name="password1" placeholder="Mot de passe" required autocomplete="off" />
-        <input type="password" class="box-input" name="password2" placeholder="Confirmer le Mot de passe" required autocomplete="off" />
+
+        <div class="container px-4">
+  <div class="row gx-7">
+    <div class="col">
+     <div class="p-3 border bg-light" style="text-align:center;"> <input class="form-check-input" type="radio" name="sexe" id="monsieur">
+            <label class="form-check-label" for="flexRadioDefault1" style=" margin-right: 30px;">
+                Monsieur </label>
+            <input class="form-check-input" type="radio" name="sexe" id="madame" style=" margin-left: 20px;">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Madame </label>
+            <input class="form-check-input" type="radio" name="sexe" id="mademoiselle" style=" margin-left: 30px;">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Mademoiselle </label></div>
+    </div>
+    
+  </div>
+</div>      
+
+        <input type="text" class="box-input" name="matricule" placeholder="Matricule" required autocomplete="off" style=" margin-top: 10px; margin-right:50px;margin-left:26px" />
+        <input type="text" class="box-input" name="titre" placeholder="Titre ou fonction" required autocomplete="off" style=" margin-top: 10px;"/>
+        <input type="text" class="box-input" name="prenoms" placeholder="Prénoms" required autocomplete="off" style=" margin-top: 10px; margin-right:50px;margin-left:26px" />
+        <input type="text" class="box-input" name="nom" placeholder="Nom" required autocomplete="off" style=" margin-top: 10px;" />
+        <input type="password" class="box-input" name="password1" placeholder="Mot de passe" required autocomplete="off" style=" margin-top: 10px; margin-right:50px;margin-left:26px" />
+        <input type="text" class="box-input" name="tg" placeholder="Trésorerie Générale" required autocomplete="off" style=" margin-top: 10px;" />
+        
+        <input type="password" class="box-input" name="password2" placeholder="Confirmer le Mot de passe" required autocomplete="off" style=" margin-top: 10px; margin-right:50px;margin-left:26px" />
 
 
         <input type="submit" name="submit" value="S'inscrire" class="box-button" />

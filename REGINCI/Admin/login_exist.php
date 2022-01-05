@@ -43,8 +43,7 @@ VALUES(?, ?, ?, ?)");
 ">
             <img src="/REGINCI/images/logo.png" alt="logo" width="70px" style=" display: block;
     margin-left: auto; margin-right: auto; margin-bottom:auto ">
-            <h1 class="box-title" style="
-    margin-top: 10px;">BIENVENUE </h1>
+            <h1 class="box-title" style="margin-top: 10px;">BIENVENUE </h1>
             <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur ou mot de passe" required autocomplete="off" />
             <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
 
