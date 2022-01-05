@@ -78,7 +78,7 @@ $errors = array();
     ?>
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
-                GESTION DES TG </h1>
+                GESTION DES GUICHETS DE L'INCI DANS LES TG </h1>
             <h1 class="box-title">Nouvelle Tresorerie? S'inscrire ici </h1>
             <input type="text" class="box-input" name="Code_tg" placeholder="Code tg" required autocomplete="off" />
 

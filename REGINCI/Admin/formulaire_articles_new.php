@@ -78,16 +78,20 @@ $errors = array();
     ?>
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
-                GESTION DES TG </h1>
+                GESTION DES GUICHETS DE L'INCI DANS LES TG </h1>
             <h1 class="box-title">Enregistrement des articles</h1>
             <input type="text" class="box-input" name="Reference_article" placeholder="Reference article" required autocomplete="off" />
 
             <input type="text" class="box-input" name="Designation_article" placeholder="Designation" required />
 
             <input type="number" class="box-input" name="Prix_unitaire" placeholder="Prix unitaire" required autocomplete="off" />
+            
+            <input type="number" class="box-input" name="Quantité" placeholder="Quantité" required autocomplete="off" />
+
 
             <input type="submit" name="submit" value="Valider" class="box-button" />
 
+            
            
         </form>
 </body>

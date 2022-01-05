@@ -78,12 +78,13 @@ $errors = array();
     ?>
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
-                GESTION DES TG </h1>
+                GESTION DES GUICHETS DE L'INCI DANS LES TG </h1>
             <h1 class="box-title">Enregistrement des recettes</h1>
-
-            <input type="number" class="box-input" name="Quantité" placeholder="Quantité" required autocomplete="off" />
-
             <input type="Date" class="box-input" name="Date" placeholder="Date" required />
+            <input type="Text" class="box-input" name="Libelle_article" placeholder="Libelle article" required autocomplete="off" />
+
+           <input type="number" class="box-input" name="Quantité" placeholder="Quantité" required autocomplete="off" />
+
 
             <input type="number" class="box-input" name="Montant" placeholder="Montant" required autocomplete="off" />
             
