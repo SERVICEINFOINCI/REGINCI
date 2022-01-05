@@ -1,7 +1,7 @@
 <?php
 
 
-require('conexion_reginci.php');
+require('connexion_reginci.php');
 
 
 //recuperer les information du formulaire
@@ -16,16 +16,16 @@ $tresorerie = $_POST['tg'];
 $password= $_POST['password2'];
 
 
-echo $civilite.' '.$matricule.$prenom.$nom.$titre.$tresorerie.$password1.$password;
+echo $civilite.' '.$matricule.$prenom.$nom.$titre.$tresorerie.$password;
 
 
 //On insère les données reçues dans la table
-/*$user = $dbco->prepare("
+$user = $dbco->prepare("
 INSERT INTO user(Civilite, Matricule_User, Nom_User, Prenom_User, Titre_User,Id_TG,Pasword)
-VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
-$user->execute(array($civilite, $matricule, $nom, $prenom, $titre, $tresorerie,$pasword));*/
+VALUES(?, ?, ?, ?, ?, ?, ?)");
+$user->execute(array($civilite, $matricule, $nom, $prenom, $titre, $tresorerie,$password));
 
-header("Location:ok_user.html");
+header("Location:merci.html");
 
 
 ?>
