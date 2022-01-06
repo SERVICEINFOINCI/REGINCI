@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    function ValiderMail(formulaire) {
+       if (formulaire.mail.value.indexOf("@",0)<0) {alert("Adresse mail saisie invalide.\nLe formulaire ne sera pas validé.")}
+       else {
+          alert("formulaire validé.\nPour valider un formulaire : formulaire.submit()");
+          // Pour valider le formulaire en javascript :
+          // formulaire.submit()
+       }
+    }
+ </script>
+ <form name="form4" action="">
+    Saisissez une adresse mail valide (du type nom@domaine.com)
+    ;<input type="texte" name="mail">
+    <input type="button" name="bouton" value="Valider" onclick="ValiderMail(this.form)">
+ </form>
+ 
+ 
