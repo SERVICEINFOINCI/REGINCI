@@ -72,7 +72,7 @@
         }
     }
     ?>
-    <form class="box" action="insert_user_new.php" method="post" autocomplete="off" style="
+    <form class="box" action="../insert_user_new.php" method="post" autocomplete="off" style="
     padding-top: 10px; width: 850px;">
 
         <img src="/REGINCI/images/logo.png" alt="logo" width="70px" style=" display: block;
@@ -111,7 +111,7 @@
         <input type="submit" name="submit" value="S'inscrire" class="box-button" />
 
         <p class="box-register">Déjà inscrit?
-            <a href="login_exist.php">Connectez-vous ici</a>
+            <a href="login_new.php">Connectez-vous ici</a>
         </p>
     </form>
 </body>
