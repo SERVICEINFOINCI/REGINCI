@@ -7,7 +7,7 @@
 
 <body>
     <?php
-  require('CONNEXION.php');
+  require('connexion_reginci.php');
 
  
 // Initialisation des variables
@@ -16,12 +16,12 @@ $errors = array();
  
 // Connexion à la base de données
 
-    if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password1'], $_REQUEST['password2']))
+    if (isset($_REQUEST['code'], $_REQUEST['libelle'], $_REQUEST['contact']))
  {
-    $username = stripslashes($_REQUEST['username']);
-    $email = stripslashes($_REQUEST['email']);
-    $password1 = stripslashes($_REQUEST['password1']);
-    $password2 = stripslashes($_REQUEST['password2']);
+    $code = stripslashes($_REQUEST['code']);
+    $libelle= stripslashes($_REQUEST['libelle']);
+    $contact = stripslashes($_REQUEST['contact']);
+    
  
     // Validation on s'assurer que le formulaire est correctement remplit
     // en ajoutant (array_push ()) l'erreur correspondante au tableau $ errors
@@ -35,28 +35,28 @@ $errors = array();
     // on vérifie d'abord la base de données pour s'assurer
     // que l'utilisateur n'existe pas déjà avec le même nom d'utilisateur et / ou email
  
-    $req = $dbco->prepare('SELECT * FROM users where username=? and email=? and password=?');
+    $req = $dbco->prepare('SELECT * FROM TG where code=? and libelle=? and contact=?');
     $req->execute(array(
-    $_POST['username'],
-    $_POST['email'],
-    $_POST['password1']));
+    $_POST['code'],
+    $_POST['libelle'],
+    $_POST['contact']));
      
     $resultat = $req->fetch();
  
     if (!$resultat)
     {
-        if (!$resultat['username'] == $username) 
+        if (!$resultat['code'] == $code) 
         {
-        array_push($errors, "Ce nom d'utilisateur existe déjà");
+        array_push($errors, "Ce nomcode  existe déjà");
         }
     
-        if (!$resultat['email'] == $email)
+        if (!$resultat['libelle'] == $libelle)
         
          {
-        array_push($errors, "l'email existe déjà");
+        array_push($errors, "libelle existe déjà");
         }
-        if (!$resultat['password1'] == $password1) {
-        array_push($errors, "le mot de passe existe déjà");
+        if (!$resultat['contact'] == $contact) {
+        array_push($errors, "le conatct existe déjà");
         }
     }
  
@@ -66,20 +66,19 @@ $errors = array();
     {
      $password = md5($password1);
  
-      $util = $dbco->prepare("INSERT INTO users(username, email, type, password)
-        VALUES(?, ?, ?, ?)");
-        $util->execute(array($username, $email, 'user', $password));
+      $util = $dbco->prepare("INSERT INTO TG(Code_TG,Libelle_TG,Contact_TG)
+        VALUES(?, ?, ?)");
+        $util->execute(array($code, $libelle,$contact));
 
             echo "<div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='login_exist.php'>connecter</a></p>
+             <h3> La TG est enrégistrée avec succès.</h3>
        </div>";
         }}
     ?>
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
-                GESTION DES GUICHETS DE L'INCI DANS LES TG </h1>
-            <h1 class="box-title">Nouvelle Tresorerie? S'inscrire ici </h1>
+                GESTION DES GUICHETS DES TG </h1>
+            <h1 class="box-title">Nouvelle TG? Enregister ici </h1>
             <input type="text" class="box-input" name="Code_tg" placeholder="Code tg" required autocomplete="off" />
 
             <input type="text" class="box-input" name="Libelle_tg" placeholder="Libelle" required />
