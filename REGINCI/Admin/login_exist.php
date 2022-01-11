@@ -55,7 +55,8 @@
                 <a href="login_new.php">Inscrivez-vous ici</a>
             </p>
         </form>
-    <?php } ?>
+     } 
+     ?>
 </body>
 
 </html>
