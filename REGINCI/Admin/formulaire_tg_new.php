@@ -18,53 +18,9 @@ $errors = array();
 
     if (isset($_REQUEST['code'], $_REQUEST['libelle'], $_REQUEST['contact']))
  {
-    $code = stripslashes($_REQUEST['code']);
-    $libelle= stripslashes($_REQUEST['libelle']);
-    $contact = stripslashes($_REQUEST['contact']);
-    
- 
-    // Validation on s'assurer que le formulaire est correctement remplit
-    // en ajoutant (array_push ()) l'erreur correspondante au tableau $ errors
- 
-    if ($password1 != $password2) 
-    {
-    array_push($errors, "Les deux mots de passe ne correspondent pas");
-    }
- 
- 
-    // on vérifie d'abord la base de données pour s'assurer
-    // que l'utilisateur n'existe pas déjà avec le même nom d'utilisateur et / ou email
- 
-    $req = $dbco->prepare('SELECT * FROM TG where code=? and libelle=? and contact=?');
-    $req->execute(array(
-    $_POST['code'],
-    $_POST['libelle'],
-    $_POST['contact']));
-     
-    $resultat = $req->fetch();
- 
-    if (!$resultat)
-    {
-        if (!$resultat['code'] == $code) 
-        {
-        array_push($errors, "Ce nomcode  existe déjà");
-        }
-    
-        if (!$resultat['libelle'] == $libelle)
-        
-         {
-        array_push($errors, "libelle existe déjà");
-        }
-        if (!$resultat['contact'] == $contact) {
-        array_push($errors, "le conatct existe déjà");
-        }
-    }
- 
-    // Finalement, on enregistre l'utilisateur s'il n'y a pas d'erreur dans le formulaire  
- 
-    if (count($errors) == 0)
-    {
-     $password = md5($password1);
+    $code = stripslashes($_REQUEST['Code_tg']);
+    $libelle= stripslashes($_REQUEST['Libelle_tg']);
+    $contact = stripslashes($_REQUEST['Contact_tg']);
  
       $util = $dbco->prepare("INSERT INTO TG(Code_TG,Libelle_TG,Contact_TG)
         VALUES(?, ?, ?)");
@@ -73,7 +29,7 @@ $errors = array();
             echo "<div class='sucess'>
              <h3> La TG est enrégistrée avec succès.</h3>
        </div>";
-        }}
+        }
     ?>
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
