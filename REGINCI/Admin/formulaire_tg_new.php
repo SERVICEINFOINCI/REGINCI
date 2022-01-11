@@ -7,7 +7,7 @@
 
 <body>
     <?php
-  require('connexion_reginci.php');
+  require('../connexion_reginci.php');
 
  
 // Initialisation des variables
@@ -16,23 +16,24 @@ $errors = array();
  
 // Connexion à la base de données
 
-    if (isset($_REQUEST['code'], $_REQUEST['libelle'], $_REQUEST['contact']))
- {
+    if (isset($_REQUEST['code'], $_REQUEST['libelle'], $_REQUEST['contact'])) {
+ 
     $code = stripslashes($_REQUEST['Code_tg']);
     $libelle= stripslashes($_REQUEST['Libelle_tg']);
     $contact = stripslashes($_REQUEST['Contact_tg']);
- 
-      $util = $dbco->prepare("INSERT INTO TG(Code_TG,Libelle_TG,Contact_TG)
-        VALUES(?, ?, ?)");
-        $util->execute(array($code, $libelle,$contact));
+      
+      
+      $tg = $dbco->prepare("INSERT INTO TG(Id_TG,Code_TG,Libelle_TG,Contact_TG)
+        VALUES(?, ?, ?,?)");
+        $tg->execute(array($code, $libelle,$contact));
 
             echo "<div class='sucess'>
              <h3> La TG est enrégistrée avec succès.</h3>
-       </div>";
+                  </div>";
         }
     ?>
-        <form class="box" action="" method="post">
-            <h1 class="box-logo box-title">
+        <form class="box" action="../insert_tg_new.php" method="post" autocomplete="off" style="
+    padding-top: 10px; width: 850px;">
                 GESTION DES GUICHETS DES TG </h1>
             <h1 class="box-title">Nouvelle TG? Enregister ici </h1>
             <input type="text" class="box-input" name="Code_tg" placeholder="Code tg" required autocomplete="off" />

@@ -4,7 +4,7 @@
 require('connexion_reginci.php');
 
 
-//recuperer les information du formulaire
+//recupérer les informations du formulaire
         
 
 $civilite = $_POST['sexe'];
