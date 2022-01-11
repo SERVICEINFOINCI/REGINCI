@@ -1,17 +1,14 @@
 <?php
-
-
-
 $serveur = "localhost";
 $dbname = "reginci";
 $user = "root";
 $pass = "";
 //recuperer les information du formulaire
 
-$codarticle = $_POST['code_art'];
-$libarticle = $_POST['libelle_art'];
-$prixarticle = $_POST['PU_art'];
-
+$Reference_article = $_POST['Reference_article'];
+$Designation_article = $_POST['Designation_article'];
+$Prix_Unitaire = $_POST['Prix_Unitaire'];
+$Id_Stock=$_Post['Id_Stock'];
 
 
 try{
@@ -19,10 +16,9 @@ try{
 $dbco = new PDO("mysql:host=$serveur;dbname=$dbname",$user,$pass);
 $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //On insère les données reçues dans la table
-$art = $dbco->prepare("
-INSERT INTO article(code_art, libelle_art, PU_art)
-VALUES(?, ?, ?)");
-$art->execute(array($codarticle, $libarticle, $prixarticle));
+$article = $dbco->prepare("INSERT INTO article(Reference_article, Designation_article, Prix_unitaire,Id_Stock)
+VALUES(?, ?, ?,?)");
+$article->execute(array($Reference_article, $Designation_article, $Prix_Unitaire,$Id_Stock));
 header("Location:ok_article.html");
 }
 catch(PDOException $e){

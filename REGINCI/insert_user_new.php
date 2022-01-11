@@ -6,7 +6,6 @@ require('connexion_reginci.php');
 
 //recupérer les informations du formulaire
         
-
 $civilite = $_POST['sexe'];
 $matricule = $_POST['matricule'];
 $prenom = $_POST['prenoms'];
