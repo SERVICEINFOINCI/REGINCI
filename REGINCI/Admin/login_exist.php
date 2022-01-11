@@ -30,8 +30,8 @@
         //   VALUES ('$username', '$email', 'user', '".hash('sha256', $password)."')";
         // $res = mysqli_query($dbco, $query);
         $util = $dbco->prepare("
-INSERT INTO users(username, email, type, password)
-VALUES(?, ?, ?, ?)");
+      INSERT INTO users(username, email, type, password)
+       VALUES(?, ?, ?, ?)");
         $util->execute(array($username, $email, 'user', $password));
     } else {
     ?>
