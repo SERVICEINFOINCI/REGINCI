@@ -4,11 +4,13 @@
 <head>
 
     <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/style local.css" />
+    <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+    
 </head>
 
 <body>
     <?php
-    require('CONNEXION.php');
+    require('../connexion_reginci.php');
 
 
     if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])) {

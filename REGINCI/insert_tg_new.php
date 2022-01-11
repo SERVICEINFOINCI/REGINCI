@@ -1,13 +1,11 @@
 <?php
 
-
-require('..');
-
+require('connexion_reginci.php');
 
 //recuperer les information du formulaire
-$code = $_POST['Code_TG'];
-$libelle = $_POST['Libelle_TG'];
-$contacttg = $_POST['Contact_TG'];
+$code = $_POST['Code_tg'];
+$libelle = $_POST['Libelle_tg'];
+$contacttg = $_POST['Contact_tg'];
 
 echo $code.' '.$libelle.$contact;
 
