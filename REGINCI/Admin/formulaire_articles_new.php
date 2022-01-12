@@ -55,7 +55,7 @@ $errors = array();
 
             echo "<div class='success'>
              <h3> Article enregistré avec succès.</h3>
-             <p>Cliquez ici pour vous <a href="../insert_article_new.php">connecter</a></p>
+             <p>clique's ici pour vous <a href='../insert_article_new.php'>connecter</a></p>
        </div>";
         }
     ?>
