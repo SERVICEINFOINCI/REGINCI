@@ -43,23 +43,23 @@ $errors = array();
         array_push($errors, "Cette réference existe déjà");
         }
     
-        if (!$resultat['Designation_article'] == $Designation_article)
+        if (!$resultat['Designation_Article'] == $Designation_Article)
         array_push($errors, "Cette désignation existe déjà");
         }
  
     // On enregistre les articles dans le formulaire  
  
-           $articles = $dbco->prepare("INSERT INTO article (Reference_article, Designation_article, Prix_Unitaire, Id_Stock)
+           $article = $dbco->prepare("INSERT INTO article (Reference_Article, Designation_Article, Prix_Unitaire, Id_Stock)
         VALUES(?, ?, ?, ?)");
-        $util->execute(array($Reference_articles, $Designation_article, 'Prix_Unitaire', $Id_Stock));
+        $util->execute(array($Reference_Articles, $Designation_article, $Prix_Unitaire, $Id_Stock));
 
             echo "<div class='success'>
-             <h3>Article enregistré avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='../ok-article.html'>connecter</a></p>
+             <h3> Article enregistré avec succès.</h3>
+             <p>Cliquez ici pour vous <a href="../insert_article_new.php">connecter</a></p>
        </div>";
         }
     ?>
-         <form class="box" action="../insert_article_new.php" method="post" autocomplete="off" style="
+         <form class="box" action="../insert_article_new.php" method="POST" autocomplete="off" style="
           padding-top: 10px; width: 850px;">
                 GESTION DES ARTICLES DE L'INCI </h1>
             <h1 class="box-title">Enregistrement des articles</h1>
