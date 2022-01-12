@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 12 jan. 2022 à 11:26
+-- Généré le : mer. 12 jan. 2022 à 12:28
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -32,16 +32,31 @@ CREATE TABLE `article` (
   `Reference_Article` varchar(30) NOT NULL,
   `Designation_Article` text NOT NULL,
   `Prix_Unitaire` int(10) NOT NULL,
-  `Id_Stock` int(11) NOT NULL
+  `Id_Stock` int(11) NOT NULL,
+  `Id_Client` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`Id_Article`, `Reference_Article`, `Designation_Article`, `Prix_Unitaire`, `Id_Stock`) VALUES
-(1, 'C007', 'Demande de Naturalisation', 0, 1),
-(2, 'C007', 'Demande de naturalisation', 0, 1);
+INSERT INTO `article` (`Id_Article`, `Reference_Article`, `Designation_Article`, `Prix_Unitaire`, `Id_Stock`, `Id_Client`) VALUES
+(1, 'C007', 'Demande de Naturalisation', 0, 1, 0),
+(2, 'C007', 'Demande de naturalisation', 0, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `client`
+--
+
+CREATE TABLE `client` (
+  `Id_Client` int(11) NOT NULL,
+  `Mat_Client` varchar(20) NOT NULL,
+  `Nom_Client` varchar(30) NOT NULL,
+  `Pren_Client` varchar(50) NOT NULL,
+  `Contact_Client` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -153,6 +168,12 @@ ALTER TABLE `article`
   ADD PRIMARY KEY (`Id_Article`);
 
 --
+-- Index pour la table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`Id_Client`);
+
+--
 -- Index pour la table `recette`
 --
 ALTER TABLE `recette`
@@ -188,6 +209,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `article`
   MODIFY `Id_Article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `client`
+--
+ALTER TABLE `client`
+  MODIFY `Id_Client` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `recette`
