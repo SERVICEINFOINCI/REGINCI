@@ -17,54 +17,57 @@ $errors = array();
  
 // Connexion à la base de données
 
-    if (isset($_REQUEST['Reference_article'], $_REQUEST['Designation_article'], $_REQUEST['Prix_Unitaire'], $_REQUEST['Id_Stock']))
+    if (isset($_REQUEST['Mat_Client'], $_REQUEST['Prenom_Client'], $_REQUEST['Nom_Client'], $_REQUEST['Contact_Client']))
  {
-    $Reference_article = stripslashes($_REQUEST['Reference_article']);
-    $Designation_article= stripslashes($_REQUEST['Designation_article']);
-    $Prix_Unitaire = stripslashes($_REQUEST['Prix_Unitaire']);
-    $Id_Stock = stripslashes($_REQUEST['Id_Stock']); 
+    $Mat_Client= stripslashes($_REQUEST['Matricule']);
+    $Prenom_Client= stripslashes($_REQUEST['Prenom']);
+    $Nom_Client= stripslashes($_REQUEST['Nom']);
+    $Contact_Client= stripslashes($_REQUEST['Contact_Client']);
+ 
  
     // on vérifie d'abord la base de données pour s'assurer
     // que l'utilisateur n'existe pas déjà avec le même nom d'utilisateur et / ou email
  
-    $req = $dbco->prepare('SELECT * FROM article where Reference_article=? and Designation_article=? and Prix_Unitaire=? and Id_Stock?');
+    $req = $dbco->prepare('SELECT * FROM client where Mat_Client=? and Prenom_Client=? and Nom_Client=? and Contact_Client?');
     $req->execute(array(
-    $_POST['Reference_article'],
-    $_POST['Designation_article'],
-    $_POST['Prix_Unitaire'],
-     $_Post['Id_Stock']));
+    $_POST['Matricule'],
+    $_POST['Prenom_Client'],
+    $_POST['Nom_Client'],
+     $_Post['Contact_Client']));
      
     $resultat = $req->fetch();
  
     if (!$resultat)
     {
-        if (!$resultat['Reference_article'] == $Reference_article) 
+        if (!$resultat['Matricule'] == $Matricule) 
         {
-        array_push($errors, "Cette réference existe déjà");
+        array_push($errors, "Cet matricule existe déjà");
         }
     
-        if (!$resultat['Designation_Article'] == $Designation_Article)
-        array_push($errors, "Cette désignation existe déjà");
+        if (!$resultat['Prenom_Client'] == $Prenom_Client)
+        array_push($errors, "Ce client existe déjà");
         }
+        if (!$resultat['Nom_Client'] == $Nom_Client)
+        array_push($errors, "Ce client existe déjà");
+        }
+ 
  
     // On enregistre les articles dans le formulaire  
  
-           $article = $dbco->prepare("INSERT INTO article (Reference_Article, Designation_Article, Prix_Unitaire, Id_Stock)
-        VALUES(?, ?, ?, ?)");
-        $util->execute(array($Reference_Articles, $Designation_article, $Prix_Unitaire, $Id_Stock));
+           $client = $dbco->prepare("INSERT INTO client ((Mat_Client,Prenom_Client, Nom_Client, Contact_Client)
+           VALUES(?, ?, ?,?)");
+        $client->execute(array($Mat_Client, $Prenom_Client, $Nom_Client, $Contact_Client));
 
             echo "<div class='success'>
-             <h3> Article enregistré avec succès.</h3>
-             <p>clique's ici pour vous <a href='../insert_article_new.php'>connecter</a></p>
+             <h3> Le Client est enregistré avec succès.</h3>
+             <p>clique's ici pour vous <a href='../insert_client_new.php'>connecter</a></p>
        </div>";
-        }
+        
     ?>
-         <form class="box" action="../insert_article_new.php" method="POST" autocomplete="off" style="
+         <form class="box" action="../insert_client_new.php" method="POST" autocomplete="off" style="
           padding-top: 10px; width: 850px;">
                 GESTION DES CLIENTS </h1>
             <h1 class="box-title">Enregistrement des clients</h1>
-
-            <input type="number" class="box-input" name="Id_Client" placeholder="Id_Client" required autocomplete="off" />
 
             <input type="text" class="box-input" name="Matricule" placeholder="Matricule" required autocomplete="off" />
 
