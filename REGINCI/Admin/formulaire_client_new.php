@@ -8,7 +8,7 @@
 
 <body>
     <?php
-  require('../connexion_reginci.php');
+  require('connexion_reginci.php');
 
  
 // Initialisation des variables
@@ -17,23 +17,23 @@ $errors = array();
  
 // Connexion à la base de données
 
-    if (isset($_REQUEST['Mat_Client'], $_REQUEST['Prenom_Client'], $_REQUEST['Nom_Client'], $_REQUEST['Contact_Client']))
+    if (isset($_REQUEST['Matricule'], $_REQUEST['Prenom'], $_REQUEST['Nom'], $_REQUEST['Contact']))
  {
-    $Mat_Client= stripslashes($_REQUEST['Matricule']);
-    $Prenom_Client= stripslashes($_REQUEST['Prenom']);
-    $Nom_Client= stripslashes($_REQUEST['Nom']);
-    $Contact_Client= stripslashes($_REQUEST['Contact_Client']);
+    $Matricule= stripslashes($_REQUEST['Matricule']);
+    $Prenom= stripslashes($_REQUEST['Prenom']);
+    $Nom= stripslashes($_REQUEST['Nom']);
+    $Contact= stripslashes($_REQUEST['Contact']);
  
  
     // on vérifie d'abord la base de données pour s'assurer
     // que l'utilisateur n'existe pas déjà avec le même nom d'utilisateur et / ou email
  
-    $req = $dbco->prepare('SELECT * FROM client where Mat_Client=? and Prenom_Client=? and Nom_Client=? and Contact_Client?');
+    $req = $dbco->prepare('SELECT * FROM client where Matricule_Client=? and Prenom_Client=? and Nom_Client=? and Contact_Client?');
     $req->execute(array(
     $_POST['Matricule'],
-    $_POST['Prenom_Client'],
-    $_POST['Nom_Client'],
-     $_Post['Contact_Client']));
+    $_POST['Prenom'],
+    $_POST['Nom'],
+     $_Post['Contact']));
      
     $resultat = $req->fetch();
  
@@ -44,19 +44,13 @@ $errors = array();
         array_push($errors, "Cet matricule existe déjà");
         }
     
-        if (!$resultat['Prenom_Client'] == $Prenom_Client)
-        array_push($errors, "Ce client existe déjà");
-        }
-        if (!$resultat['Nom_Client'] == $Nom_Client)
-        array_push($errors, "Ce client existe déjà");
-        }
- 
+     }
  
     // On enregistre les articles dans le formulaire  
  
-           $client = $dbco->prepare("INSERT INTO client ((Mat_Client,Prenom_Client, Nom_Client, Contact_Client)
+           $client = $dbco->prepare("INSERT INTO client ((Matricule_Client,Prenom_Client, Nom_Client, Contact_Client)
            VALUES(?, ?, ?,?)");
-        $client->execute(array($Mat_Client, $Prenom_Client, $Nom_Client, $Contact_Client));
+        $client->execute(array($Matricule_Client, $Prenom_Client, $Nom_Client, $Contact_Client));
 
             echo "<div class='success'>
              <h3> Le Client est enregistré avec succès.</h3>
