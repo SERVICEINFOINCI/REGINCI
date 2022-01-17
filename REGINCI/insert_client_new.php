@@ -1,7 +1,5 @@
 <?php
-
 require('../connexion_reginci.php');
-
 //recupérer les information du formulaire
 
 $Matricule_Client= $_POST['Matricule'];

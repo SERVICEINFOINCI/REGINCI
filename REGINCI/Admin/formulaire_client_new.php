@@ -8,7 +8,7 @@
 
 <body>
     <?php
-  require('../connexion_reginci.php');
+  require('../connexion_reginci);
 
  
 // Initialisation des variables
