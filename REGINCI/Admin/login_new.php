@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/style local.css" />
     <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
 </head>
-
+ 
 <body>
     <?php
     require('../connexion_reginci.php');
