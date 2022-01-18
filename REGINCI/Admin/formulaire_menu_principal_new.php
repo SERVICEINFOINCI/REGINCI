@@ -3,11 +3,14 @@
 
 <head>
 <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/style local.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     </head>
 </head>
 
 <body>
     <?php
- /* require('CONNEXION.php');*/
+  /*require('CONNEXION.php');*/
+    /*require('connexion_reginci.php');*/
 
  
 // Initialisation des variables
@@ -78,26 +81,37 @@ $errors = array();
     ?>
         <form class="box" action="" method="post">
             <h1 class="box-logo box-title">
-                GESTION DES TG </h1>
-            <h1 class="box-title">ACHAT DE PRODUITS</h1></br>
-            <h1 class="box-title">INFORMATION DU CLIENT</h1>
+                GESTION DES GUICHETS DANS LES TRESORERIES GENERALES DE CÔTE D'IVOIRE </h1>
+            <div class="container">
+            <h1>Menu principal</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="formulaire_achat_produit_new.php">Nouvelle vente</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="formulaire_articles_new.php"> Gestion des articles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Entrée en stock</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sortie de stock</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Niveau de stock</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="formulaire_recette_new.php">Rapport de vente</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Edition inventaire</a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
 
-            <input type="Text" class="box-input" name="Prenoms" placeholder="Prenoms" required autocomplete="off" />
-
-            <input type="Text" class="box-input" name="Nom" placeholder="Nom" required />
-
-            <input type="number" class="box-input" name="Contact" placeholder="Contact" required autocomplete="off" />
-
-            <h1 class="box-title">ARTICLES COMMANDES</h1>
-            
-            <input type="text" class="box-input" name="Designation_article" placeholder="Designation article" required />
-            <input type="number" class="box-input" name="Quantité_article" placeholder="Quantité article" required />
-            <input type="number" class="box-input" name="Prix_unitaire_article" placeholder="Prix unitaire article" required />
-            <input type="Date" class="box-input" name="Date" placeholder="Date" required />
-
-            <input type="submit" name="submit" value="Valider" class="box-button" />
-
-           
+            <input type="submit" name="submit" value="Fermer" class="box-button" />           
         </form>
 </body>
 

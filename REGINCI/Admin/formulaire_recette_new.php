@@ -7,7 +7,7 @@
 
 <body>
     <?php
-  require('CONNEXION.php');
+  /*require('CONNEXION.php');*/
 
  
 // Initialisation des variables
