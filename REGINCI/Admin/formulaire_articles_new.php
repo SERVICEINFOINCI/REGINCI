@@ -63,7 +63,7 @@ $errors = array();
           padding-top: 10px; width: 850px;">
                 GESTION DES ARTICLES DE L'INCI </h1>
             <h1 class="box-title">Enregistrement des articles</h1>
-            <input type="text" class="box-input" name="Reference_article" placeholder="Reference article" required autocomplete="off" />
+            <input type="text" class="box-input" name="Ref_article" placeholder="Reference article" required autocomplete="off" />
 
             <input type="text" class="box-input" name="Designation_article" placeholder="Designation" required />
 
