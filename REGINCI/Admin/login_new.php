@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/style local.css" />
-    <link rel="stylesheet" href="/REGINCI/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/style local.css" />
+    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
 </head>
  
 <body>
@@ -75,7 +75,7 @@
     <form class="box" action="../insert_user_new.php" method="post" autocomplete="off" style="
     padding-top: 10px; width: 850px;">
 
-        <img src="/REGINCI/images/logo.png" alt="logo" width="70px" style=" display: block;
+        <img src="/images/logo.png" alt="logo" width="70px" style=" display: block;
     margin-left: auto; margin-right: auto; margin-bottom:auto ">
         <h1 class="box-title" style="
     margin-top: 10px;">BIENVENUE </h1>
