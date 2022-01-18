@@ -2,7 +2,7 @@
 $serveur = "localhost";
 $dbname = "reginci";
 $user = "root";
-$pass = "";
+$pass = "root";
 
 try{
     //On se connecte à la BDD
