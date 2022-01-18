@@ -12,28 +12,7 @@
     <?php
     require('../connexion_reginci.php');
 
-
-    if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])) {
-       
-        // récupérer le nom d'utilisateur 
-        $username = stripslashes($_REQUEST['username']);
-        //$username = mysqli_real_escape_string($dbco, $username); 
-        //mysqli_real_escape_string — Protège les caractères spéciaux d'une chaîne pour l'utiliser dans une requête SQL, en prenant en compte le jeu de caractères courant de la connexion
-        // récupérer l'email 
-        $email = stripslashes($_REQUEST['email']);
-        // $email = mysqli_real_escape_string($dbco, $email);
-        // récupérer le mot de passe 
-        $password = stripslashes($_REQUEST['password']);
-        // $password = mysqli_real_escape_string($dbco, $password);
-
-        // $query = "INSERT into `users` (username, email, type, password)
-        //   VALUES ('$username', '$email', 'user', '".hash('sha256', $password)."')";
-        // $res = mysqli_query($dbco, $query);
-        $util = $dbco->prepare("
-      INSERT INTO users(username, email, type, password)
-       VALUES(?, ?, ?, ?)");
-        $util->execute(array($username, $email, 'user', $password));
-    } else {
+  
     ?>
 <div class="marquee-rtl">
     <!-- le contenu défilant -->
