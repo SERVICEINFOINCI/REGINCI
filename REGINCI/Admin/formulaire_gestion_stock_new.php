@@ -59,26 +59,31 @@ $errors = array();
        </div>";
         }
     ?>
-         <form class="box" action="../insert_article_new.php" method="POST" autocomplete="off" style="
-          padding-top: 10px; width: 850px;">
-                GESTION DES ARTICLES DE L'INCI </h1>
-            <h1 class="box-title">Enregistrement des articles</h1>
-            <input type="text" class="box-input" name="Reference_article" placeholder="Reference article" required autocomplete="off" />
-
-            <input type="text" class="box-input" name="Designation_article" placeholder="Designation" required />
-
-            <input type="number" class="box-input" name="Prix_unitaire" placeholder="Prix unitaire" required autocomplete="off" />
-            
-            <input type="number" class="box-input" name="Id_Stock" placeholder="Id_Stock" required autocomplete="off" />
-
-            <input type="number" class="box-input" name="Id_Client" placeholder="Id_Client" required autocomplete="off" />
-
-
-            <input type="submit" name="submit" value="Valider" class="box-button" />
-
-            
+        <div class="container">
+    
+      <nav>
+        <h1>Liste des entrées en stock :</h1>
+        <ul class="nav nav-fill">
+          <li class="nav-item"><a class="nav-link" href="#">Nouvelle entréé</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Consulter les entrées</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Recherche d'Entrée</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Imprimer</a></li>
+        </ul>
+      </nav>
+      <br>
+      <nav> 
+        <h3>Liste de toutes les entrées en stock :</h3>
+        <ul class="nav nav-justified">
+          <li class="nav-item"><a class="nav-link" href="#">Date (Entrée)</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reference (Article)</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Designation (Article)</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Quantite (Entrée)</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Saisir par:---</a></li>
+        </ul>
+      </nav>
+    </div>
            
-        </form>
+        
 </body>
 
 </html>
