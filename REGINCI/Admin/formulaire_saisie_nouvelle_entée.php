@@ -51,51 +51,11 @@ $errors = array();
     ?>
         <form class="box" action="../insert_stock_new.php" method="post" autocomplete="off" style="
           padding-top: 10px; width: 850px;">
-                GESTION DES ENTREES EN STOCKS  </h1>
-            <h1 class="box-title">Enregistrement des entrée en stocks des articles</h1>
+            <h1 class="box-title">SAISIE DES ENTREES EN STOCKS</h1>
             <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <button class="btn btn-outline-success" type="button">Nouvelle entée</button>
-    <button class="btn btn-outline-success" type="button">Consulter les entées</button>
-    <button class="btn btn-outline-success" type="button">recherche des entrées</button>
-    <button class="btn btn-outline-success" type="button">Imprimer entrée</button>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Date (Entée)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Reference (Article)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Designation (article)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Quantite (Entée)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Saisir par:</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    
-  </form>
-</nav>
-           
+  <div>
+                    
         </form>
 </body>
 
