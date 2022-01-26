@@ -9,10 +9,8 @@
 
 <body>
     <?php
-  /*require('CONNEXION.php');*/
-    /*require('connexion_reginci.php');*/
-
- 
+  require('../connexion_reginci.php');
+  
 // Initialisation des variables
  
 $errors = array();

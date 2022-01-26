@@ -8,8 +8,7 @@
 
 <body>
     <?php
-  require('../connexion_reginci.php');
-
+ require('../connexion_reginci.php');
     ?>
          <form class="box" action="../insert_article_new.php" method="POST" autocomplete="off" style="
           padding-top: 10px; width: 850px;">

@@ -42,7 +42,7 @@
     ?>
 <div class="marquee-rtl">
     <!-- le contenu défilant -->
-    <div style="margin-top: 15px;font-size:25px; color:green">RESEAU DE GESTION DES GUICHETS DE L'IMPRIMERIE NATIONALE DANS LES TRESORERIES GENERALES DE CÔTE D'IVOIRE.</div>
+    <div style="margin-top: 15px;font-size:10px; color:green">RESEAU DE GESTION DES GUICHETS DE L'IMPRIMERIE NATIONALE DANS LES TRESORERIES GENERALES DE CÔTE D'IVOIRE.</div>
 </div>
 
         <form class="box" action="" method="post" autocomplete="off" style="
