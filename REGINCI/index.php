@@ -1,6 +1,8 @@
 
 <!DOCTYPE html>
-
+<?php
+require('../REGINCI/connexion_reginci.php');
+?>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -91,3 +93,4 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+
